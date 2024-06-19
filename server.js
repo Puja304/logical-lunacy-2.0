@@ -25,7 +25,7 @@ const projects = [
 ];
 
 app.use(cors({
-  origin: '*'
+  origin: '/public'
 }));
 // Endpoint to get project data
 app.get('/projects', (req, res) => {
