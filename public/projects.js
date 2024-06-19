@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-    fetch('Access-Control-Allow-Origin','https://git.heroku.com/logical-lunacy.git')
+    fetch('https://git.heroku.com/logical-lunacy.git')
         .then(response => response.json())
         .then(projects => {
             const container = document.getElementById('projects-container');
