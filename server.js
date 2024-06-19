@@ -1,5 +1,5 @@
 const express = require('express');
-const cors = require('cors');
+//const cors = require('cors');
 const path = require('path');
 const app = express();
 const host = '0.0.0.0';
@@ -24,9 +24,9 @@ const projects = [
   }
 ];
 
-app.use(cors({
-  origin: '*'
-}));
+//app.use(cors({
+//  origin: '*'
+//}));
 // Endpoint to get project data
 app.get('/projects', (req, res) => {
   res.json(projects);
