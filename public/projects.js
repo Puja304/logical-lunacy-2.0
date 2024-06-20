@@ -1,5 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
-    fetch('/projects')
+    const isLocal = window.location.hostname === 'localhost';
+    const apiUrl = isLocal ? 'http://localhost:3000/projects' : '/projects';
+    fetch(apiUrl)
         .then(response => response.json())
         .then(projects => {
             const container = document.getElementById('projects-container');
