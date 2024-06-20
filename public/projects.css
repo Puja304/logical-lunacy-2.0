@@ -109,6 +109,7 @@ body{
 
 
 #projects-container {
+    overflow: hidden;
     padding-top: 10%;
     display: flex;
     flex-wrap: wrap;
@@ -142,6 +143,17 @@ body{
 .project-tile img {
     width: 800px;
     height: 400;
+}
+
+.project-tile img:hover {
+    z-index: 999;
+    width: 100%;
+    height: auto;
+}
+
+.disappear {
+    z-index: 0;
+
 }
 
 

@@ -3,6 +3,7 @@ const move = target.getElementsByTagName("img");
 let mainThing = document.querySelector(".text");
 const hint = document.createElement('h4');
 hint.textContent = "I see you've disregarded the warning. If it helps, just know that they value persistence";
+hint.classList.add("helpful-hint")
 
 
 // Convert HTMLCollection to an array

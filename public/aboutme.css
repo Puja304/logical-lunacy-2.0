@@ -1,16 +1,17 @@
 
 body{
-    background-color:#F4EFE8;
+    background-color:#f3deec;
     margin: 0;
 }
 
 .header{
+    z-index: 1;
     animation: slide-down 2s ease-out;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
     position: fixed;
     width: 100%;
-    background-color:#003559;
-    color:#B0530C;
+    background-color:#F4EFE8;
+    color:#930A31;
     display: block;
     justify-items: center;
     margin-bottom: 0%;
@@ -25,11 +26,11 @@ body{
         justify-items: space-around;
         
         button{
-            background-color:#003559;
+            background-color:#F4EFE8;
             margin-left: 40px;
             padding: 10px;
             border: none;
-            color:#F4EFE8;
+            color: black;
             font-size: large;
             font-family: 'Playfair Display';
             letter-spacing: 1px;
@@ -37,7 +38,7 @@ body{
         }
         button:hover{
             cursor: pointer;
-            background-color: #B0530C;
+            background-color: #930A31;
             color: #F4EFE8;
             border-radius: 15px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -66,6 +67,9 @@ body{
 
 .mainBody{
     /*animation: slide-down 2s ease-out;*/
+   /* background-image: url(colorMush3.gif);
+    background-repeat: no-repeat;
+    background-size: cover;*/
     overflow: hidden;
     display: flex;
     justify-content: space-between;
@@ -73,33 +77,39 @@ body{
     padding-bottom: 10%;
     width: 100%;
     justify-items: center;
+    background-color:#769dbf;
     .text{
         animation: slide-left 2s ease-out;
         margin-left: 2.5%;
         text-align: center;
         margin-top: 300px;
-        background-color:#F4EFE8;
+        /*background-color:#F4EFE8;*/
         color: black;
-        background-color:#769dbf;
+        
         width: 55%;
         align-content: center;
         padding: 30px;
         height: 50%;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
-        border: 10px;
+        /*box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);*/
+        /*border: 10px;*/
         h1{
-            animation: colorChange 3s infinite;
+            /*animation: colorChange 3s infinite;*/
             font-family: 'Abril Fatface';
             font-size: 60px;
-            color: lightpink;
+            color: #003559;
             font-weight: 100;
         }
         p{
             font-family: 'Playfair Display';
+            /*color:#F4EFE8;*/
             color:#F4EFE8;
         }
         .monsterIntro{
             margin-top: 150px;;
+        }
+
+        img{
+            z-index: 2;
         }
 
     }
@@ -110,11 +120,16 @@ body{
         margin-top: 12%;
         height: 740px;
         width: auto;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        /*box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);*/
         filter:contrast(5px);
         margin-right: 2.5%;
         filter: saturate(70%);
-        z-index: -1;
+        z-index: 0;
+        opacity: 90%;
+        /*border-radius: 100%;*/
+        border-width: 8px;
+        border-color: #F4EFE8;
+        border-style: solid;
 
 
     }
@@ -200,14 +215,14 @@ body{
 }
 
 .footer{
-    background-color: #003559;
+    background-color: #F4EFE8;
     display: flex;
     height: 250px;
     justify-content: space-between;
     align-content: center;
     align-items: center;
     font-family: "PlayFair Display";
-    color:#F4EFE8;
+    color: black;
     .left{
         margin: 0%;
         display: block;
@@ -227,4 +242,12 @@ body{
 .whenClicked {
     transform: translate(-50%, -50%);
     position: fixed;
+}
+
+
+.helpful-hint{
+    font-family: "Playfair Display";
+    color:#F4EFE8;
+    font-weight: lighter;
+    /*font-size: 60px;*/
 }
