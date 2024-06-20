@@ -68,9 +68,11 @@ body{
     /*animation: slide-down 2s ease-out;*/
     overflow: hidden;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     height: auto;
     padding-bottom: 10%;
+    width: 100%;
+    justify-items: center;
     .text{
         animation: slide-left 2s ease-out;
         margin-left: 2.5%;
