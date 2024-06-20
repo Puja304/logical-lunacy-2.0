@@ -20,10 +20,10 @@ body{
     .menu{
         width: 35%;
         display: flex;
-        margin-right: 1%;
-        justify-items: space-around;
+        justify-items: space-between;
+        justify-content: center;
         button{
-            margin-left: 5px;
+            margin-left: 0.01%;
             padding: 10px;
             background-color:#F4EFE8;
             border: none;

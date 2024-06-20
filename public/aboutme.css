@@ -69,7 +69,8 @@ body{
     overflow: hidden;
     display: flex;
     justify-content: space-between;
-    height: 1000px;
+    height: auto;
+    padding-bottom: 10%;
     .text{
         animation: slide-left 2s ease-out;
         margin-left: 2.5%;
@@ -81,7 +82,7 @@ body{
         width: 55%;
         align-content: center;
         padding: 30px;
-        height: 500px;
+        height: 50%;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
         border: 10px;
         h1{
@@ -103,7 +104,7 @@ body{
 
     .myPic{
         animation: slide-right 2s ease-out;
-        margin-top: 10%;
+        margin-top: 12%;
         height: 740px;
         width: auto;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
