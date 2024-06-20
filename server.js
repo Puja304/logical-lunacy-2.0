@@ -9,7 +9,7 @@ const port = process.env.PORT || 3000;
 const projects = [
   {
     title: "Command-Line Adventure Game",
-    image: 'logo.png',
+    image: 'adventureGame.png',
     description: "An adventure game where the player must solve riddles and fight monsters to exit the building before the zombies reach."
   },
   {
