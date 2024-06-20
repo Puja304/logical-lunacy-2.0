@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-    fetch('https://git.heroku.com/logical-lunacy.git')
+    fetch('/projects')
         .then(response => response.json())
         .then(projects => {
             const container = document.getElementById('projects-container');
