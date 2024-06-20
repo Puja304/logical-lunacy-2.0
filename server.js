@@ -14,7 +14,7 @@ const projects = [
   },
   {
     title: "Personal Website",
-    image: 'monster1.png',
+    image: 'websiteHome.png',
     description: "Created a personal portfolio website: the one you are reading this on. Used: HTML, CSS, JS, Node.js"
   },
   {

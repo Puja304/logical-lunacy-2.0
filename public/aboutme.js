@@ -1,4 +1,8 @@
 const move = document.getElementsByTagName("img");
+let mainThing = document.querySelector(".text");
+const hint = document.createElement('h4');
+hint.textContent = "I see you've disregarded the warning. If it helps, just know that they value persistence";
+
 
 // Convert HTMLCollection to an array
 Array.from(move).forEach(element => {
@@ -24,6 +28,10 @@ Array.from(move).forEach(element => {
                     left: `${clientX}px`,
                     top: `${clientY}px`
                 }, {duration: 1000, fill: "forwards"});
+                mainThing.appendChild(hint);
+            }
+            else{
+                mainThing.removeChild(hint);
             }
         }
     });

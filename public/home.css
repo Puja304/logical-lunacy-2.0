@@ -73,9 +73,8 @@ body{
         border-radius: 100%;
 
     }
-    img:hover{
-        height: 150px;
-        width: 150px;
+    .logo:hover{
+        transform : translateY(-3%);
     }
 
     h4{
