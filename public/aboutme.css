@@ -67,9 +67,9 @@ body{
 
 .mainBody{
     /*animation: slide-down 2s ease-out;*/
-   /* background-image: url(colorMush3.gif);
+    background-image: url(colorMush3.gif);
     background-repeat: no-repeat;
-    background-size: cover;*/
+    background-size: cover;
     overflow: hidden;
     display: flex;
     justify-content: space-between;
