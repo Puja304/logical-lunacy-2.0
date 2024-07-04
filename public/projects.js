@@ -13,19 +13,31 @@ document.addEventListener("DOMContentLoaded", function() {
                 const title = document.createElement('h2');
                 title.textContent = project.title;
 
+                
+                const description = document.createElement('p');
+                description.textContent = project.description;
+
                 if(project.image){
                     const image = document.createElement('img');
                     image.src = project.image;
                     image.alt = project.title;
+                    projectTile.appendChild(title);
                     projectTile.appendChild(image);
+                    projectTile.appendChild(description);
+                }else{
+                    const linkage = document.createElement('a');
+                    linkage.href = project.description;
+                    linkage.target = 'blank';
+                    linkage.style.textDecoration = 'none';
+                    linkage.style.textDecoration = 'bold';
+                    linkage.style.fontFamily = 'Playfair Display';
+                    linkage.style.color = '#003559';
+                    linkage.textContent = project.description;
+                    projectTile.appendChild(title);
+                    projectTile.appendChild(linkage);
                 }
 
-
-                const description = document.createElement('p');
-                description.textContent = project.description;
-
-                projectTile.appendChild(title);
-                projectTile.appendChild(description);
+                
 
                 container.appendChild(projectTile);
             });
