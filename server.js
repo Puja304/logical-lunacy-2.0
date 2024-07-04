@@ -56,6 +56,11 @@ const projects = [
     description: "recreated an interpretation of the mario underwater level using python's turtle. added elements like coins, jellyfish, and pillars"
   },
   {
+    title: "Visual Rock Paper Scissors",
+    image: "rps.png",
+    description: "Created a graphic rock, paper, scissors game primarily using Javascript"
+  }
+  {
     title: "Talks Lookup System",
     image:"talks.png",
     description: "Used C to create a program that would take a file with talks (duration and description of speeches) and present them to the user, with the ability to sort and search within"
