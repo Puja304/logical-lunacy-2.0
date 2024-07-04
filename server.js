@@ -1,6 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const path = require('path');
+const { title } = require('process');
 const app = express();
 const host = '0.0.0.0';
 const port = process.env.PORT || 3000;
@@ -8,7 +9,7 @@ const port = process.env.PORT || 3000;
 // Example project data
 const projects = [
   {
-    titel: "Find all my projects @ :",
+    title: "Find all my projects @ :",
     image: "",
     description: "https://github.com/Puja304"
   },
