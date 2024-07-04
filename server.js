@@ -8,6 +8,11 @@ const port = process.env.PORT || 3000;
 // Example project data
 const projects = [
   {
+    titel: "Find all my projects @ :",
+    image: "",
+    description: "https://github.com/Puja304"
+  },
+  {
     title: "Command-Line Adventure Game",
     image: 'adventureGame.png',
     description: "An adventure game where the player must solve riddles and fight monsters to exit the building before the zombies reach."

@@ -13,15 +13,18 @@ document.addEventListener("DOMContentLoaded", function() {
                 const title = document.createElement('h2');
                 title.textContent = project.title;
 
-                const image = document.createElement('img');
-                image.src = project.image;
-                image.alt = project.title;
+                if(project.image){
+                    const image = document.createElement('img');
+                    image.src = project.image;
+                    image.alt = project.title;
+                    projectTile.appendChild(image);
+                }
+
 
                 const description = document.createElement('p');
                 description.textContent = project.description;
 
                 projectTile.appendChild(title);
-                projectTile.appendChild(image);
                 projectTile.appendChild(description);
 
                 container.appendChild(projectTile);
