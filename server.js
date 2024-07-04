@@ -59,7 +59,7 @@ const projects = [
     title: "Visual Rock Paper Scissors",
     image: "rps.png",
     description: "Created a graphic rock, paper, scissors game primarily using Javascript"
-  }
+  },
   {
     title: "Talks Lookup System",
     image:"talks.png",
