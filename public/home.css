@@ -5,22 +5,23 @@ body{
 
 .header{
     z-index:999;
-    animation: slide-down 3s ease-out;
+    animation: slide-down 2s ease-out;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
     position: fixed;
     width: 100%;
     background-color:#F4EFE8;
     color: black;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     margin-bottom: 0%;
+    padding-top: 1%;
+    padding-bottom: 1%;
     align-items: center;
     overflow: hidden;
     height: fit-content;
     .menu{
         width: 35%;
         display: flex;
-        justify-items: space-between;
         justify-content: center;
         button{
             margin-left: 0.01%;
@@ -44,19 +45,21 @@ body{
         }
     }
     .title{
-        margin-left: 10px;
         display: inline-flexbox;
         margin-top: -4%;
-        text-align: center;
+        text-align: left;
+
+        a{
+            text-decoration:none;
+        }
 
         p{
-            text-decoration: underline;
+            margin-left: -2%;
             color:#003559;
-            letter-spacing: 10px;
+            letter-spacing: 15px;
             padding: 0%;
-            font-size: 80px;
-            font-family: "Abril Fatface";
-            font-stretch: ultra-expanded;
+            font-size: 75px;
+            font-family:'Abril Fatface';
             margin-bottom: 0%;
         }
     }
@@ -65,9 +68,8 @@ body{
         font-weight: bold;
     }
     img{
-        margin-left: 20px;
-        height: 150px;
-        width: 150px;
+        height: 135px;
+        width: 135px;
         padding-left: 0;
         margin-right: auto;
         border-radius: 100%;
@@ -89,7 +91,7 @@ body{
 
 .mainBody{
     z-index:-999;
-    animation: slide-down 2s ease-out;
+    animation: slide-down 1.5s ease-out;
 
     background-color: #769dbf;      /*#efc9f3#DEF2F1*/
     margin-bottom: 0%;
@@ -111,6 +113,11 @@ body{
     h1{
         font-family: 'Abril Fatface';
     }
+}
+
+.mainBody:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /*enahnced*/
 }
 
 .footer{
@@ -175,5 +182,4 @@ body{
 .oneEffect{
     animation: colorChange 6s infinite;
 }
-
 
