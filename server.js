@@ -7,7 +7,7 @@ const app = express();
 const host = '0.0.0.0';
 const port = process.env.PORT || 3000;
 
-// Example project data
+// project data
 const projects = [
   {
     title: "Find all my projects @",
