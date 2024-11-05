@@ -64,7 +64,7 @@ export default function Projects() {
                 <IoArrowUpCircleOutline className="back-arrow" color="white" onClick={() => handleBackToHome()} />
                 <IoArrowUpCircle className="back-arrow-filled" color="white" onClick={() => handleBackToHome()} />
             </div>
-            <Navbar value="Projects" light={false} />
+            <Navbar value="projects" light={false} />
             <div className="project-container">
                 <h1>{currentProject.name}</h1>
                 <status>

@@ -43,6 +43,9 @@ export default function Menu(){
                         <Row value="o" pos="0" columns={1}/>
                         <Row value="u" pos="0" columns={1}/>
                         <Row value="t" pos="0" columns={1}/>
+                        {/* <Row value="-" pos="0" columns={1}/>
+                        <Row value="m" pos="0" columns={1}/>
+                        <Row value="e" pos="0" columns={1}/> */}
                         </tbody>
                     </table>
                 </button>
