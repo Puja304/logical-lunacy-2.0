@@ -1,0 +1,196 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+.homepage {
+    background-color: black;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+
+}
+
+.header{
+    margin-top: 5%;
+    width: 100%;
+    color: #CBFDD0;
+    font-family: 'Abril Fatface';
+    font-size: 500%;
+    font-weight: lighter;
+    p{
+        letter-spacing: 0.15em;
+    }
+    opacity: 0;
+    transition : opacity 0.25 ease-in-out;
+
+}   
+
+.crossword-intro{
+    width: 100%;
+    padding-top: 5%;
+    justify-items: center;
+    height: 55%;
+    align-content: center;
+    color: #FFFFFF;
+    font-family: "IBM Plex Mono";
+    margin-bottom: 0%;
+}
+
+.cross{
+    font-size: 175%;
+    width: 60%;
+}
+
+.crossword-intro td {
+    width: 5%;
+    height: 3vw;
+    /* border: 1px solid rgba(192, 192, 192, 0.5); Light grey borders */
+    /* background-color: rgba(245, 245, 198, 0.311); /* Pale pink background */
+    /* transition: background-color 0.3s, border-color 0.3s; Smooth transition effects */ 
+    text-align: center;
+    font-size: 1.5rem;
+    color: white;
+    opacity: 0;
+    transition: opacity 0.5 ease-in-out;
+    gap: 0%
+
+}
+
+
+.crossword-intro td:hover{
+  background-color: rgba(255, 192, 203, 0.1); /* Slightly more opaque on hover */
+  border-color: rgba(192, 192, 192, 0.7); /* Darker grey borders on hover */
+}
+
+
+.note{
+    margin-top: 3%;
+    color: black;
+    background-color:#FFFFFF;
+    justify-items: center;
+    align-content: center;
+    padding: 0%;
+    width: 20%;
+    height: 5%;
+    opacity: 0;
+
+    button{
+        font-family: "IBM PLex Mono";
+        background-color:#FFFFFF;
+        color: black;
+        width: 100%;
+        height: 100%;
+        font-size: large;
+    }
+}
+
+.menu{
+    width: 60%;
+    justify-items: center;
+    height: 55%;
+    align-content: center;
+    color: #FFFFFF;
+    font-family: "IBM Plex Mono";
+    margin-bottom: 0%;
+    background-color: #FFFFFF;
+}
+
+.menu table{
+    width: 40%;
+    height: 6vw;
+}
+
+.menu td {
+    width: 25%;
+    height: 3vw;
+    text-align: center;
+    font-size: 1.5rem;
+    color: #FFFFFF;
+    background-color: black;
+    gap: 0%;
+
+}
+
+.about-me{
+    position: absolute;
+    left: 0.5%;
+    top: 40%;
+    width: 2.5%;
+
+    button {
+        width: 100%;
+        height: 100%;
+        border: none;
+        padding: 0%;
+        margin: 0%;
+
+        table{
+            width: 100%;
+        }
+    }
+}
+.about-me td{
+
+    background-color: rgba(46, 114, 6, 0.8);
+    font-family: "IBM Plex Mono";
+    font-size: 200%;
+    margin: 0%;
+    border: none;
+}
+
+
+.contact{
+    position: absolute;
+    right: 0.5%;
+    top: 35%;
+    width: 2.5%;
+
+    button {
+        width: 100%;
+        height: 100%;
+        border: none;
+        padding: 0%;
+        margin: 0%;
+
+        table{
+            width: 100%;
+        }
+    }
+}
+.contact td{
+
+    background-color: rgba(46, 114, 6, 0.8);
+    font-family: "IBM Plex Mono";
+    font-size: 200%;
+    margin: 0%;
+}
+
+
+.projects{
+    position: absolute;
+    right: 40%;
+    top: 95%;
+    width: 20%;
+
+    button {
+        width: 100%;
+        height: 100%;
+        border: none;
+        padding: 0%;
+        margin: 0%;
+
+        table{
+            width: 100%;
+        }
+    }
+}
+.projects td{
+    width: 12.5%;
+    background-color: rgba(46, 114, 6, 0.8);
+    font-family: "IBM Plex Mono";
+    font-size: 200%;
+    margin: 0%;
+}
+

@@ -1,0 +1,137 @@
+ [ 
+    {
+        "name": "Command-Line Adventure Game",
+        "languages" : ["C++"],
+        "frameworks" : ["VS Code"],
+        "status" : true,
+        "picture_link": "/images/adventureGame.png",
+        "description": "An adventure game where the player must solve riddles and fight monsters to exit the building before the zombies reach."
+    },
+    {
+        "name": "Personal Website",
+        "languages" : ["HTML, CSS, Javascript"],
+        "frameworks" : ["React.js, Node.js"],
+        "status" : true,
+        "picture_link": "/images/websiteHome.png",
+        "description": "Created a personal portfolio website: the one you are reading this on. Used: HTML, CSS, JS, Node.js."
+    },
+    {
+        "name":"Issue Tracking System",
+        "languages" : ["C++"],
+        "frameworks" : ["VS Code"],
+        "status" : true,
+        "picture_link": "/images/issueTS.png",
+        "description": "Analysed requirements for, designed, developed, and tested a program that helps companies track bugs report and update requests. Used thorough documentation."
+    },
+    {
+        "name": "Wordle",
+        "languages" : ["Python, C++"],
+        "frameworks" : ["VS Code"],
+        "status" : true,
+        "picture_link" : "/images/wordle.png",
+        "description": "A command-line version of the popular game Wordle created twice, with C and python respectively"
+    },
+    {
+        "name": "Hangman",
+        "languages" : ["Python"],
+        "frameworks" : ["VS Code"],
+        "status" : true,
+        "picture_link": "/images/hangman.png",
+        "description": "A command-line version of Hangman using python"
+    },
+    {
+        "name":"Machine Learning Profit Predictor",
+        "languages" : ["Python"],
+        "frameworks" : ["MATLAB, Numpy, Scikit-Learn, Pandas"],
+        "status" : true,
+        "picture_link": "/images/profitPrediction.png",
+        "description": "Used a small set of training material detailing a business's profit and the population of the city it is based in, to train a model to predict profits based on population"
+    },
+    {
+        "name":"Movie Site",
+        "languages" : ["HTML, CSS, Javascript"],
+        "frameworks" : ["React.js"],
+        "status" : true,
+        "picture_link":"/images/movieSite.png",
+        "description":"Created a website that allowed user to search a movie and find all matching results (Thumbnail + title). Used an API to get movie information and HTML, CSS, and JS to make it"
+    },
+    {
+        "name": "Mario Underwater Scene - Turtles",
+        "languages" : ["Python"],
+        "frameworks" : ["VS Code"],
+        "status" : true,
+        "picture_link": "/images/mario.png",
+        "description": "recreated an interpretation of the mario underwater level using python's turtle. added elements like coins, jellyfish, and pillars"
+    },
+    {
+        "name": "Visual Rock Paper Scissors",
+        "languages" : ["HTML, CSS, Javascript"],
+        "frameworks" : ["React.js"],
+        "status" : true,
+        "picture_link": "/images/rps.png",
+        "description": "Created a graphic rock, paper, scissors game primarily using Javascript"
+    },
+    {
+        "name": "Talks Lookup System",
+        "languages" : ["C++"],
+        "frameworks" : ["VS Code"],
+        "status" : true,
+        "picture_link":"/images/talks.png",
+        "description": "Used C to create a program that would take a file with talks (duration and description of speeches) and present them to the user, with the ability to sort and search within"
+    },
+    {
+        "name":"ADTs and Data Structures",
+        "languages" : ["C++"],
+        "frameworks" : ["VS Code"],
+        "status" : true,
+        "picture_link":"/images/DS.png",
+        "description":"Implemented ADTs and Data Structures such as lists, linked lists, binary trees, BSTs, binary heaps, stacks, queues, and hashtables from scratch using both c and c++. More details on github"
+    },
+    {
+        "name": "Sorting Algorithms",
+        "languages" : ["C++"],
+        "frameworks" : ["VS Code"],
+        "status" : true,
+        "picture_link": "/images/SA.png",
+        "description":"Implemented simple and complex sorting algorithms using C++ (selection, insertion, merge, quick, heap). More details on github"
+    },
+    {
+        "name": "Vector Cone",
+        "languages" : ["MATLAB"],
+        "frameworks" : ["MATLAB"],
+        "status" : true,
+        "picture_link": "/images/cone.png",
+        "description": "Used vector calculations and MATLAB plotting tools to create a cone from vectors."
+    },{
+        "name": "Friendsbook",
+        "languages" : ["C++"],
+        "frameworks" : ["VS Code"],
+        "status" : true,
+        "picture_link": "/images/fb.png",
+        "description": "Created a social-media-inspired software that allows for users to join and leave the network, find other people, and modify their information"
+    },
+    {
+        "name": "Simple Expression Evaluator",
+        "languages" : ["C++"],
+        "frameworks" : ["VS Code"],
+        "status" : true,
+        "picture_link": "/images/eval.png",
+        "description": "Created a program that takes in a simple mathematical expression and solves it by keeping in mind the order of operations. Implemented using a pair of stacks."
+    },
+    {
+        "name": "English-Sanskrit Translator",
+        "languages" : ["C++"],
+        "frameworks" : ["VS Code"],
+        "status" : true,
+        "picture_link": "/images/translator.png",
+        "description": "Used BST and Dictionary to create a translator program that takes in English words and gives out their Sanskrit translations"
+    },
+    {
+        "name": "Bank Simulation",
+        "languages" : ["C++"],
+        "frameworks" : ["VS Code"],
+        "status" : true,
+        "picture_link": "/images/BS.png",
+        "description": "Created a program that keeps track of customer arrival time and interaction duration with bank-teller in order to produce a record of every interaction at a bank. Used a combination of binary heap and priority queue for its implementation"
+    }  
+]

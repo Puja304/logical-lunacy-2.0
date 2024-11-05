@@ -1,0 +1,80 @@
+.contact-me-page{
+    background-color: #FFFFFF;
+    margin: 0%;
+    padding: 0%;
+    overflow: hidden;
+    position: relative;
+}
+
+.main-body{
+    height: 60vh;
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-grid{
+    height: 80%;
+    width: 70%;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 15%;
+    opacity: 0;
+    animation: slideLeftOpacity 1s ease-in forwards;
+}
+
+.box{
+
+    text-align: center;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.theIcon{
+    height: 60%;
+    margin-left: 5%;
+}
+
+.box-text{
+    font-family: "IBM PLex Mono";
+    margin-left: 20%;
+    text-decoration: none;
+    color: black;
+    font-size: large;
+    font-weight: 400;
+}
+
+.arrows-left{
+    /* border-color: black;
+    border-style: solid; */
+    position: absolute;
+    top: 50%;
+    left: 2%;
+    height: 3%;
+    width: 2%;
+}
+
+.back-arrow-filled{
+    display: none;
+    height: 100%;
+    width: 100%;
+}
+
+.back-arrow{
+    height: 100%;
+    width: 100%;
+}
+
+.arrows-left:hover {
+    top:49.5%;
+    .back-arrow {
+        display: none;
+    }
+
+    .back-arrow-filled{
+        display: inline;
+        color: black;
+    }
+}

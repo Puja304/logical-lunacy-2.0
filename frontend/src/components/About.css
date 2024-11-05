@@ -1,0 +1,84 @@
+.about-me-page{
+    position: relative;
+    background-color: #FFFFFF;
+    height: 100vh;
+    overflow: hidden;
+    justify-items: center;
+}
+
+.pic-and-text{
+    padding: 0%;
+    margin-top: 2%;
+    display: flex;
+    padding-right: 5%;
+}
+
+@keyframes slideLeftOpacity { 
+    0% { transform: translateX(100%); /* Start off-screen below */ 
+    opacity: 0; /* Start hidden */ 
+    } 
+
+    100% { transform: translateX(0);  /* End at the original position */ 
+        opacity: 1; /* End visible */ } 
+}
+
+.pic-and-text .pic{
+    max-width: 50%;
+    opacity: 0;
+    animation: slideLeftOpacity 1s ease-in forwards;
+}
+
+.pic-and-text img{
+    width: 55%;
+    height: 100%;
+}
+
+.text-box{
+    font-family: "IBM Plex Mono";
+    height: 100%;
+    width: 100%;
+    
+    p{
+        margin-top: 10%;
+        height: 100%;
+        width: 100%;
+        text-align: center;
+        font-weight: 400;
+    }
+
+    opacity: 0;
+    animation: slideLeftOpacity 1s ease-in forwards;
+}
+
+.arrows-right{
+    /* border-color: black;
+    border-style: solid; */
+    position: absolute;
+    top: 50%;
+    right: 2%;
+    height: 3%;
+    width: 2%;
+}
+
+.back-arrow-filled{
+    display: none;
+    height: 100%;
+    width: 100%;
+}
+
+.back-arrow{
+    height: 100%;
+    width: 100%;
+}
+
+.arrows-right:hover {
+    top: 49.5%;
+    .back-arrow {
+        display: none;
+    }
+
+    .back-arrow-filled{
+        display: inline;
+        color: black;
+    }
+}
