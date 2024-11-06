@@ -70,14 +70,13 @@ export default function Home () {
 
     useEffect(() => {
 
-        if(!lightMode){
-            const titleElement = document.querySelector('.animated-text'); 
-            resetName(titleElement);
-            const bodyElement = document.querySelector('.expanding-div');
-            resetBody(bodyElement);
-            const note = document.querySelector(".note");
-            resetNote(note);
-        }
+        const titleElement = document.querySelector('.animated-text'); 
+        resetName(titleElement);
+        const bodyElement = document.querySelector('.expanding-div');
+        resetBody(bodyElement);
+        const note = document.querySelector(".note");
+        resetNote(note);
+        
 
         const animateTitle = () => {
             const titles = document.querySelector('.header');
@@ -109,7 +108,7 @@ export default function Home () {
 
     return (
         <div className={`homepage ${lightMode ? 'light-mode' : 'dark-mode'}`} >
-            <div className="animated-text">
+            <div className="animated-text" style={{display: lightMode ? "none" : "block"}}>
                 <p>logical lunacy</p>
             </div>
             <div className="expanding-div" style={{animationDuration : lightMode ? "2s ": "0s"}}>

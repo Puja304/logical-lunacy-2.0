@@ -242,7 +242,7 @@
     justify-items: center;
     height: 55%;
     align-content: center;
-    color: #FFFFFF;
+    color: #ffffff;
     font-family: "IBM Plex Mono";
     margin-bottom: 0%;
     background-color: #FFFFFF;
@@ -258,7 +258,7 @@
     height: 3vw;
     text-align: center;
     font-size: 1.5rem;
-    color: #FFFFFF;
+    color: #ff9090;
     background-color: black;
     gap: 0%;
 
@@ -267,13 +267,13 @@
 .menu td:hover{
     transform: scale(1.15);
 }
-
 .about-me{
     position: absolute;
-    left: 30%;
+    left: 25%;
     top: 25%;
     width: 2.5%;
-
+    color: black;
+    width: 2.5%;
     button {
         background-color: #FFFFFF;
         width: 100%;
@@ -288,9 +288,9 @@
     }
 }
 .about-me td{
-
-    background-color: rgba(100, 174, 57, 0.8);
-    font-family: "IBM Plex Mono";
+    background-color: rgba(100, 174, 57, 0);
+    color: black;
+    font-family: "Anton SC";
     font-size: 200%;
     margin: 0%;
     border: none;
@@ -300,9 +300,10 @@
 .about-me td:hover{
     transform: scale(1.15);
 }
+
 .contact{
     position: absolute;
-    right: 30%;
+    right: 25%;
     top: 23%;
     width: 2.5%;
 
@@ -321,8 +322,9 @@
 }
 .contact td{
 
-    background-color: rgba(100, 174, 57, 0.8);
-    font-family: "IBM Plex Mono";
+    background-color: rgba(100, 174, 57, 0);
+    color: black;
+    font-family: "Anton SC";
     font-size: 200%;
     margin: 0%;
     border-radius: 0.1em;
@@ -335,7 +337,7 @@
 .projects{
     position: absolute;
     right: 40%;
-    top: 50%;
+    top: 15%;
     width: 20%;
 
     button {
@@ -353,8 +355,9 @@
 }
 .projects td{
     width: 12.5%;
-    background-color: rgba(100, 174, 57, 0.8);
-    font-family: "IBM Plex Mono";
+    background-color: rgba(100, 174, 57, 0);
+    color: black;
+    font-family: "Anton SC";
     font-size: 200%;
     margin: 0%;
     border-radius : 0.1em;

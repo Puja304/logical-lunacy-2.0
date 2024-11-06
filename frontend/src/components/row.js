@@ -13,7 +13,7 @@ export default function Row(props){
     return (
         <tr className="aRow">
             {thisRow.map((char,index) => (
-                <td key={index} className="cell" style={{ color: char === '/' ? "pink" : "white"}}>{char}</td>
+                <td key={index} className="cell">{char}</td>
             ))}
         </tr>
     )
