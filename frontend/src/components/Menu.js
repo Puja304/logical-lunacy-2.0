@@ -93,7 +93,7 @@ export default function Menu(){
             <div className="menu">
                 <table className="menu-table">
                     <tbody className="menu-body">
-                        <Row value="MENU" pos="0" columns={4}/>
+                        <Row value="menu" pos="0" columns={4}/>
                     </tbody>    
                 </table>
             </div>

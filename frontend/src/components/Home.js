@@ -116,7 +116,7 @@ export default function Home () {
             </div>
             <div className="note" style={{animationDelay : lightMode ? "0s ": "7s", visibility : lightMode ? "visible" : "hidden"}}>
                 <button onClick={toggleMode}>
-                    {lightMode ? "Close" : "Menu"}
+                    {lightMode ? "close" : "menu"}
                 </button>
             </div>
         </div>

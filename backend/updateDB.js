@@ -1,13 +1,13 @@
 const fs = require('fs');
 const { Client } = require('pg');
 
-// Create a connection to the database
+// Use DATABASE_URL if available, else construct the connection string locally
+const connectionString = process.env.DATABASE_URL || 
+    `postgres://postgres:PostgreSQLpu2301!@localhost:5432/myprojects`; // Your fallback connection string for local development
+
 const client = new Client({
-    host: 'localhost', // your PostgreSQL host (use a Heroku-provided URL when deployed)
-    user: 'postgres', // your PostgreSQL username
-    password: 'PostgreSQLpu2301!', // your PostgreSQL password
-    database: 'myprojects', // your database name
-    port: 5432 // default PostgreSQL port
+    connectionString,
+    ssl: process.env.DATABASE_URL ? { rejectUnauthorized: false } : undefined // Only apply SSL if on Heroku
 });
 
 client.connect();
@@ -55,4 +55,3 @@ const updateDatabase = async (projects) => {
         console.error('Error updating the database:', err);
     }
 };
-
