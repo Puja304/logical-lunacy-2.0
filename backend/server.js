@@ -1,7 +1,7 @@
 // server.js
 const express = require('express');
 const cors = require('cors');
-const connection = require('./db'); // Import the database connection
+const client = require('./db'); // Import the database connection
 const app = express();
 const path = require('path');
 
@@ -11,16 +11,14 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.json()); // Parse JSON bodies for POST requests
 
 // Example route to fetch all projects from the 'projects' table
-app.get('/', (req, res) => {
-    const query = 'SELECT * FROM projects';
-    connection.query(query, (err, results) => {
-        if (err) {
-            console.error('Error fetching projects:', err);
-            res.status(500).send('Error fetching projects');
-            return;
-        }
-        res.json(results);
-    });
+app.get('/', async (req, res) => {
+    try {
+        const result = await client.query('SELECT * FROM projects');
+        res.json(result.rows);
+    } catch (err) {
+        console.error('Error fetching projects:', err);
+        res.status(500).send('Error fetching projects');
+    }
 });
 
 // Route to add a new project
@@ -46,7 +44,7 @@ app.post('/projects', (req, res) => {
 });
 
 // Start the server
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
 });

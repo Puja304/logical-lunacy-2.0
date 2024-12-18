@@ -258,8 +258,8 @@
     height: 3vw;
     text-align: center;
     font-size: 1.5rem;
-    color: #ff9090;
-    background-color: black;
+    color:#faded2;
+    background-color:#df8db1; /*set from Menu.js, not here*/
     gap: 0%;
 
 }
@@ -290,7 +290,8 @@
 .about-me td{
     background-color: rgba(100, 174, 57, 0);
     color: black;
-    font-family: "Anton SC";
+    font-family: "Ubuntu Sans Mono";
+    font-weight: bold;
     font-size: 200%;
     margin: 0%;
     border: none;
@@ -324,7 +325,8 @@
 
     background-color: rgba(100, 174, 57, 0);
     color: black;
-    font-family: "Anton SC";
+    font-family: "Ubuntu Sans Mono";
+    font-weight: bold;
     font-size: 200%;
     margin: 0%;
     border-radius: 0.1em;
@@ -357,7 +359,8 @@
     width: 12.5%;
     background-color: rgba(100, 174, 57, 0);
     color: black;
-    font-family: "Anton SC";
+    font-family: "Ubuntu Sans Mono";
+    font-weight: bold;
     font-size: 200%;
     margin: 0%;
     border-radius : 0.1em;

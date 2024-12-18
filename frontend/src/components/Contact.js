@@ -59,8 +59,8 @@ export default function Contact() {
                     {createBox("puja.shah321", "https://www.instagram.com/puja.shah321/", 2, Insta)}
                     {createBox("linkedin.puja.shah", "https://linkedin.com/in/puja-shah-711a79177", 3, Linkedin)}
                     {createBox("github.puja304", "https://github.com/Puja304", 4, Git)}
-                    {createBox("778-513-9193", "", 5, Phone)}
-                    {createBox("@hopefuldisaster23", "", 6, Discord)}
+                    {createBox("+1 778-513-9193", "", 5, Phone)}
+                    {createBox("@hopefuldisaster23", "https://discordapp.com/users/@hopefuldisaster23", 6, Discord)}
                 </div>
             </div>
             

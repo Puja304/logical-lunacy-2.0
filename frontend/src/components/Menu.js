@@ -15,7 +15,7 @@ export default function Menu(){
                 const cells = row.querySelectorAll('td');
                 
                 cells.forEach((cell, i) => {
-                    cell.style.backgroundColor =  "black";
+                    cell.style.backgroundColor =  "#b83556";
                     setTimeout(() => {cell.style.opacity = 1;}, i * 30)
 
                   });

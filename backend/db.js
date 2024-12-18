@@ -1,20 +1,17 @@
-const mysql = require('mysql2');
+const { Client } = require('pg');
 
 // Create a connection to the database
-const connection = mysql.createConnection({
-    host: 'localhost',
-    user: 'root', // your MySQL username
-    password: 'MySQLpu2301!', // your MySQL password
-    database: 'myprojects', // your database name4
+const client = new Client({
+    host: 'localhost', // your PostgreSQL host (use a Heroku-provided URL when deployed)
+    user: 'postgres', // your PostgreSQL username
+    password: 'PostgreSQLpu2301!', // your PostgreSQL password
+    database: 'myprojects', // your database name
+    port: 5432 // default PostgreSQL port
 });
 
-// Function to insert projects into the database
-connection.connect((err) => {
-    if (err) {
-        console.error('Error connecting to the database:', err);
-        return;
-    }
-    console.log('Connected to the MySQL database.');
-});
+// Connect to the PostgreSQL database
+client.connect()
+    .then(() => console.log('Connected to the PostgreSQL database.'))
+    .catch(err => console.error('Error connecting to the database:', err));
 
-module.exports = connection;
+module.exports = client;
