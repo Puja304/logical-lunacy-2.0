@@ -22,6 +22,8 @@
         opacity: 1; /* End visible */ } 
 }
 
+
+/*comment*/
 .pic-and-text .pic{
     max-width: 50%;
     opacity: 0;
