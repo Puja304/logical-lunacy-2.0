@@ -12,6 +12,9 @@ export default function Projects() {
     const [projectSet, setProjectSet] = useState([]);
     const [currentProjNum, setCurrentProjectNum] = useState(0);
 
+    // Define the backend URL dynamically based on the environment
+    const backendUrl = process.env.REACT_APP_BACKEND_URL || 'http://localhost:5000';
+
     useEffect(() => {
         const animateTitle = () => {
             const titles = document.querySelector('.header');
@@ -22,7 +25,7 @@ export default function Projects() {
         setTimeout(() => animateTitle(), 500);
 
         console.log('Fetching projects...');
-        fetch('http://localhost:5000/api/projects')
+        fetch(`${backendUrl}/api/projects`)  // Use the dynamic backend URL here
             .then(response => {
                 console.log('Response received:', response);
                 if (!response.ok) {
@@ -61,12 +64,29 @@ export default function Projects() {
     return (
         <div className="projects-page">
             <div className="arrows-up">
-                <IoArrowUpCircleOutline className="back-arrow" color="white" onClick={() => handleBackToHome()} />
-                <IoArrowUpCircle className="back-arrow-filled" color="white" onClick={() => handleBackToHome()} />
+                <IoArrowUpCircleOutline 
+                    className="back-arrow" 
+                    color="white" 
+                    onClick={() => handleBackToHome()} 
+                />
+                <IoArrowUpCircle 
+                    className="back-arrow-filled" 
+                    color="white" 
+                    onClick={() => handleBackToHome()} 
+                />
             </div>
             <Navbar value="projects" light={false} />
-            <div className="github"> 
-                <h3>find all projects @ <a href="https://github.com/Puja304" target="_blank" style={{ textDecoration: 'none', textDecoration : 'underline'}}> myGitHub</a></h3>
+            <div className="github">
+                <h3>
+                    Find all projects @ 
+                    <a 
+                        href="https://github.com/Puja304" 
+                        target="_blank" 
+                        style={{ textDecoration: 'none', textDecoration: 'underline' }}
+                    >
+                        myGitHub
+                    </a>
+                </h3>
             </div>
             <div className="project-container">
                 <div className="details">
@@ -78,8 +98,11 @@ export default function Projects() {
                     <h3>Languages: {currentProject.languages}</h3>
                     <h3>Frameworks: {currentProject.frameworks}</h3>
                 </div>
-                {console.log(`Image path: http://localhost:5000/api/projects/${currentProject.picture_link}`)}
-                <img src={`http://localhost:5000${currentProject.picture_link}`} alt={currentProject.name} />
+                {console.log(`Image path: ${backendUrl}${currentProject.picture_link}`)}
+                <img 
+                    src={`${backendUrl}${currentProject.picture_link}`} // Use the dynamic backend URL here
+                    alt={currentProject.name} 
+                />
                 <p>{currentProject.description}</p>
                 <div className="arrows">
                     <FaArrowRight className="right" onClick={nextProject} />
