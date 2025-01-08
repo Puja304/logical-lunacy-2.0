@@ -1,0 +1,185 @@
+body{
+    background-color: #F4EFE8;
+    margin: 0;
+}
+
+.header{
+    z-index:999;
+    animation: slide-down 2s ease-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    position: fixed;
+    width: 100%;
+    background-color:#F4EFE8;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    align-items: center;
+    overflow: hidden;
+    height: fit-content;
+    .menu{
+        width: 35%;
+        display: flex;
+        justify-content: center;
+        button{
+            margin-left: 0.01%;
+            padding: 10px;
+            background-color:#F4EFE8;
+            border: none;
+            color: #003559;
+            font-size: large;
+            font-family: 'Playfair Display';
+            letter-spacing: 1px;
+            font-weight:bolder;
+        }
+        button:hover{
+            cursor: pointer;
+            background-color: #930A31;
+            color: #F4EFE8;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            font-size: larger;
+
+        }
+    }
+    .title{
+        display: inline-flexbox;
+        margin-top: -4%;
+        text-align: left;
+
+        a{
+            text-decoration:none;
+        }
+
+        p{
+            margin-left: -2%;
+            color:#003559;
+            letter-spacing: 15px;
+            padding: 0%;
+            font-size: 75px;
+            font-family:'Abril Fatface';
+            margin-bottom: 0%;
+        }
+    }
+
+    p:hover{
+        font-weight: bold;
+    }
+    img{
+        height: 135px;
+        width: 135px;
+        padding-left: 0;
+        margin-right: auto;
+        border-radius: 100%;
+
+    }
+    .logo:hover{
+        transform : translateY(-3%);
+    }
+
+    h4{
+        font-size: 20px;
+        font-family: 'Source Code Pro';
+        letter-spacing: 5px;
+        color: #930A31;
+        text-decoration: none;
+    }
+
+}
+
+.mainBody{
+    z-index:-999;
+    animation: slide-down 1.5s ease-out;
+
+    background-color: #769dbf;      /*#efc9f3#DEF2F1*/
+    margin-bottom: 0%;
+    color: white;
+    display: flexbox;
+    justify-content: center;
+    text-align: center;
+    height: 500px;
+    padding-top: 500px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    h1,p{
+        text-align: center;
+    }
+    p{
+        font-family: 'Playfair Display';
+        width: 40%;
+        margin: 0 30%;
+    }
+    h1{
+        font-family: 'Abril Fatface';
+    }
+}
+
+.mainBody:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /*enahnced*/
+}
+
+.footer{
+    display: flex;
+    height: 250px;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    font-family: "PlayFair Display";
+    color: black;
+    .left{
+        margin: 0%;
+        display: block;
+        padding-left: 3%;
+        width: 20%;
+    }
+
+    .right{
+        display: flex;
+        align-items: center;
+        width: 25%;
+        height: 150px;
+        padding: 20px;
+    }
+}
+
+
+
+
+@keyframes colorChange {
+    0% {
+        color: #930A31;
+    }
+    25% {
+        color: #930A31;
+    }
+    50%{
+        color: #d3597c;
+    }
+    75% {
+        color: #ef7a9b;
+    }
+    100% {
+        color: lightpink;
+    }
+}
+
+@keyframes slide-down{
+    from{
+        transform : translateY(-100%);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+ 
+
+}
+
+
+.oneEffect{
+    animation: colorChange 6s infinite;
+}
+

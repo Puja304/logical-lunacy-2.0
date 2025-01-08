@@ -134,20 +134,21 @@ export default function Crossword(){
 
     },[])
 
+    const cols = 20;
     return (
         <div className="crossword-intro">
             <table className="cross">
                 <tbody>
-                    <Row value= "" pos = {0} columns = {20}/>
-                    <Row value= "" pos = {0} columns = {20}/>
-                    <Row value= "I'" pos = {8} columns = {20}/>
-                    <Row value= "WELCOME" pos = {3} columns = {20}/>
-                    <Row value= "/" pos = {8} columns = {20}/>
-                    <Row value= "A/PROGRAMMER" pos = {6} columns = {20}/>
-                    <Row value= "U" pos = {8} columns = {20}/>
-                    <Row value= "J" pos = {8} columns = {20}/>
-                    <Row value= "A" pos = {8} columns = {20}/>
-                    <Row value= "" pos = {0} columns = {20}/>
+                    <Row value= "" pos = {0} columns = {cols}/>
+                    <Row value= "" pos = {0} columns = {cols}/>
+                    <Row value= "I'" pos = {8} columns = {cols}/>
+                    <Row value= "WELCOME" pos = {3} columns = {cols}/>
+                    <Row value= "/" pos = {8} columns = {cols}/>
+                    <Row value= "A/PROGRAMMER" pos = {6} columns = {cols}/>
+                    <Row value= "U" pos = {8} columns = {cols}/>
+                    <Row value= "J" pos = {8} columns = {cols}/>
+                    <Row value= "A" pos = {8} columns = {cols}/>
+                    <Row value= "" pos = {0} columns = {cols}/>
                 </tbody>
                 
             </table>

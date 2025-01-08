@@ -65,14 +65,19 @@ export default function Projects() {
                 <IoArrowUpCircle className="back-arrow-filled" color="white" onClick={() => handleBackToHome()} />
             </div>
             <Navbar value="projects" light={false} />
+            <div className="github"> 
+                <h3>find all projects @ <a href="https://github.com/Puja304" target="_blank" style={{ textDecoration: 'none', textDecoration : 'underline'}}> myGitHub</a></h3>
+            </div>
             <div className="project-container">
-                <h1>{currentProject.name}</h1>
-                <status>
-                    <GoDotFill color={currentProject.status ? 'green' : 'red'} />
-                    {currentProject.status ? "Completed" : "In Progress"}
-                </status>
-                <h3>Languages: {currentProject.languages}</h3>
-                <h3>Frameworks: {currentProject.frameworks}</h3>
+                <div className="details">
+                    <h1>{currentProject.name}</h1>
+                    <status>
+                        <GoDotFill color={currentProject.status ? 'green' : 'red'} />
+                        {currentProject.status ? "Completed" : "In Progress"}
+                    </status>
+                    <h3>Languages: {currentProject.languages}</h3>
+                    <h3>Frameworks: {currentProject.frameworks}</h3>
+                </div>
                 {console.log(`Image path: http://localhost:5000${currentProject.picture_link}`)}
                 <img src={`http://localhost:5000/${currentProject.picture_link}`} alt={currentProject.name} />
                 <p>{currentProject.description}</p>

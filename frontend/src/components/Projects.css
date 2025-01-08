@@ -6,6 +6,16 @@
     justify-items: center;
 }
 
+.github{
+    color: white;
+
+    a{
+        color:purple;
+        font-style: italic;
+        text-decoration: underline;
+        background-color: white;
+    }
+}
 .project-container{
     margin-top: 2%;
     background-color: rgb(255,255,255);
@@ -41,7 +51,6 @@
     margin-top: 5%;
     margin-bottom: 5%;
 }
-
 
 .left{
     position: absolute;
