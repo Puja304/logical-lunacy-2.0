@@ -8,10 +8,11 @@ const path = require('path');
 
 app.use(cors());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use('/images', express.static(path.join(__dirname, 'public/images')));
 app.use(express.json()); // Parse JSON bodies for POST requests
 
 // Example route to fetch all projects from the 'projects' table
-app.get('/', async (req, res) => {
+app.get('/api/projects', async (req, res) => {
     try {
         const result = await client.query('SELECT * FROM projects');
         res.json(result.rows);
@@ -19,6 +20,11 @@ app.get('/', async (req, res) => {
         console.error('Error fetching projects:', err);
         res.status(500).send('Error fetching projects');
     }
+});
+
+// Serve the React app for all other routes
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, "public", "index.html"));
 });
 
 // Route to add a new project

@@ -22,7 +22,7 @@ export default function Projects() {
         setTimeout(() => animateTitle(), 500);
 
         console.log('Fetching projects...');
-        fetch('http://localhost:5000')
+        fetch('http://localhost:5000/api/projects')
             .then(response => {
                 console.log('Response received:', response);
                 if (!response.ok) {
@@ -78,8 +78,8 @@ export default function Projects() {
                     <h3>Languages: {currentProject.languages}</h3>
                     <h3>Frameworks: {currentProject.frameworks}</h3>
                 </div>
-                {console.log(`Image path: http://localhost:5000${currentProject.picture_link}`)}
-                <img src={`http://localhost:5000/${currentProject.picture_link}`} alt={currentProject.name} />
+                {console.log(`Image path: http://localhost:5000/api/projects/${currentProject.picture_link}`)}
+                <img src={`http://localhost:5000${currentProject.picture_link}`} alt={currentProject.name} />
                 <p>{currentProject.description}</p>
                 <div className="arrows">
                     <FaArrowRight className="right" onClick={nextProject} />
