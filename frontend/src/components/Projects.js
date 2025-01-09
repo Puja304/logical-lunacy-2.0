@@ -13,8 +13,7 @@ export default function Projects() {
     const [currentProjNum, setCurrentProjectNum] = useState(0);
 
     // Define the backend URL dynamically based on the environment
-    let backendUrl = 'https://your-backend-app.herokuapp.com';
-
+    const backendUrl = 'https://logical-lunacy-51c7491d9460.herokuapp.com';
     useEffect(() => {
         const animateTitle = () => {
             const titles = document.querySelector('.header');
@@ -23,14 +22,13 @@ export default function Projects() {
             }
         };
         setTimeout(() => animateTitle(), 500);
-
+    
         console.log('Fetching projects...');
-
+    
         // Function to fetch from a given URL
         const fetchProjects = (url) => {
-            return fetch(`${url}/projects`)
-                console.log(`Attempting to fetch from ${url}`);
-                return fetch(`${url}/projects`
+            console.log(`Attempting to fetch from ${url}`); // Moved inside the fetchProjects function
+            return fetch(`${url}/projects`) // Correct API endpoint
                 .then(response => {
                     if (!response.ok) {
                         throw new Error('Network response was not ok');
@@ -46,20 +44,17 @@ export default function Projects() {
                     throw error;  // Re-throw the error to allow fallback logic
                 });
         };
-
+    
         // Try to fetch from Heroku first
         fetchProjects(backendUrl)
-            console.log('Successfully fetched from Heroku'
-            .catch(() => {
-                // If fetching from Heroku fails, fall back to localhost
-                console.log('Heroku fetch failed, trying localhost...');
-                backendUrl = 'http://localhost:5000';
-                fetchProjects( backendUrl)
-                    .catch(error => {
-                        console.error('Error fetching projects from localhost:', error);
-                    });
+            .then(() => {
+                console.log('Successfully fetched from Heroku');
+            })
+            .catch(error => {
+                console.error('Error fetching projects from Heroku:', error);
             });
     }, []);
+
 
     const nextProject = () => {
         setCurrentProjectNum((currentProjNum + 1) % projectSet.length);
@@ -72,7 +67,7 @@ export default function Projects() {
     let currentProject = projectSet[currentProjNum];
 
     if (!currentProject) {
-        return <div>Loading...</div>; // Handle loading state
+        return <div>No projects found</div>; // Handle loading state
     }
 
     const handleBackToHome = () => {
@@ -119,7 +114,7 @@ export default function Projects() {
                 </div>
                 {console.log(`Image path: ${backendUrl}${currentProject.picture_link}`)}
                 <img 
-                    src={`${backendUrl}${currentProject.picture_link}`} // Use the dynamic backend URL here
+                    src={`${backendUrl}${currentProject.picture_link}`}
                     alt={currentProject.name} 
                 />
                 <p>{currentProject.description}</p>

@@ -4,8 +4,8 @@ const path = require('path');
 const { title } = require('process');
 const { deserialize } = require('v8');
 const app = express();
-const host = '0.0.0.0';
-const port = process.env.PORT || 3000;
+const host = 'cf980tnnkgv1bp.cluster-czrs8kj4isg7.us-east-1.rds.amazonaws.com';
+const port = process.env.PORT || 5432;
 
 // project data
 const projects = [

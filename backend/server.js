@@ -23,29 +23,32 @@ app.get('/projects', async (req, res) => {
 });
 
 // Route to add a new project
-app.post('/projects', (req, res) => {
+app.post('/projects', async (req, res) => {
     const { name, languages, frameworks, status, picture_link, description } = req.body;
-    const query = 'INSERT INTO projects (name, languages, frameworks, status, picture_link, description) VALUES (?, ?, ?, ?, ?, ?)';
-    const values = [
-        name,
-        JSON.stringify(languages || []),
-        JSON.stringify(frameworks || []),
-        status ? 1 : 0,
-        picture_link,
-        description
-    ];
-    connection.query(query, values, (err, results) => {
-        if (err) {
-            console.error('Error inserting project:', err);
-            res.status(500).send('Error inserting project');
-            return;
-        }
+    try {
+        const query = `
+            INSERT INTO projects (name, languages, frameworks, status, picture_link, description)
+            VALUES ($1, $2, $3, $4, $5, $6)
+        `;
+        const values = [
+            name,
+            JSON.stringify(languages || []),
+            JSON.stringify(frameworks || []),
+            status ? 1 : 0,
+            picture_link,
+            description
+        ];
+        await client.query(query, values);
         res.status(201).send('Project added successfully');
-    });
+    } catch (err) {
+        console.error('Error inserting project:', err);
+        res.status(500).send('Error inserting project');
+    }
 });
 
+
 // Start the server
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT;
 app.listen(PORT, '0.0.0.0', () => {
-    console.log(`Server is running on http://localhost:${PORT}`);
+    console.log(`Server is running on port ${PORT}`);
 });
