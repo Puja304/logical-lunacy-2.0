@@ -12,7 +12,7 @@ app.use('/images', express.static(path.join(__dirname, 'public/images')));
 app.use(express.json()); // Parse JSON bodies for POST requests
 
 // Example route to fetch all projects from the 'projects' table
-app.get('/api/projects', async (req, res) => {
+app.get('/projects', async (req, res) => {
     try {
         const result = await client.query('SELECT * FROM projects');
         res.json(result.rows);
