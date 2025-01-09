@@ -30,7 +30,7 @@ export default function Projects() {
         const fetchProjects = (url) => {
             return fetch(`${url}/api/projects`)
                 console.log(`Attempting to fetch from ${url}`);
-                return fetch(`${url}/api/projects`
+                return fetch(`${url}/projects`
                 .then(response => {
                     if (!response.ok) {
                         throw new Error('Network response was not ok');
