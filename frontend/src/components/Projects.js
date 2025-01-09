@@ -28,7 +28,7 @@ export default function Projects() {
 
         // Function to fetch from a given URL
         const fetchProjects = (url) => {
-            return fetch(`${url}/api/projects`)
+            return fetch(`${url}/projects`)
                 console.log(`Attempting to fetch from ${url}`);
                 return fetch(`${url}/projects`
                 .then(response => {

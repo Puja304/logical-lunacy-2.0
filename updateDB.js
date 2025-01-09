@@ -1,26 +1,38 @@
 const fs = require('fs');
 const { Client } = require('pg');
 
-// Use DATABASE_URL if available, else construct the connection string locally
-const connectionString = process.env.DATABASE_URL || 
-    `postgres://postgres:PostgreSQLpu2301!@localhost:5432/myprojects`; // Your fallback connection string for local development
-
 const client = new Client({
-    connectionString,
-    ssl: process.env.DATABASE_URL ? { rejectUnauthorized: false } : undefined // Only apply SSL if on Heroku
-});
-
-client.connect();
-
-// Read and parse the JSON file
-fs.readFile('./projects.json', 'utf8', async (err, data) => {
-    if (err) {
-        console.error('Error reading the JSON file:', err);
-        return;
+    host: 'cf980tnnkgv1bp.cluster-czrs8kj4isg7.us-east-1.rds.amazonaws.com',
+    port: 5432,
+    user: 'u6d875dkqb3ikm',
+    password: 'p165aa5941e87a4bbefe3f4897c3eb2f1e0866112bdffafcd8feab9b00937fd11',
+    database: 'd8d35u30r82ug3',
+    ssl: {
+        rejectUnauthorized: false
     }
-    const projects = JSON.parse(data);
-    await updateDatabase(projects);
 });
+
+const run = async () => {
+    try {
+        await client.connect();
+        console.log('Connected to database');
+
+        // Read and parse the JSON file
+        fs.readFile('./projects.json', 'utf8', async (err, data) => {
+            if (err) {
+                console.error('Error reading the JSON file:', err);
+                return;
+            }
+            console.log('Successfully read projects.json');
+            const projects = JSON.parse(data);
+            console.log('Parsed projects:', projects); // Log the parsed data
+            await updateDatabase(projects);
+        });
+
+    } catch (err) {
+        console.error('Error during script execution:', err);
+    }
+};
 
 const updateDatabase = async (projects) => {
     const updatePromises = projects.map(project => {
@@ -45,7 +57,14 @@ const updateDatabase = async (projects) => {
             project.description || ''
         ];
 
-        return client.query(query, values);
+        console.log(`Preparing to insert/update project: ${project.name}`); // Debugging log
+        return client.query(query, values)
+            .then(result => {
+                console.log(`Result for ${project.name}:`, result); // Log result of query execution
+            })
+            .catch(error => {
+                console.error(`Error executing query for ${project.name}:`, error);
+            });
     });
 
     try {
@@ -53,5 +72,10 @@ const updateDatabase = async (projects) => {
         console.log('Database updated successfully!');
     } catch (err) {
         console.error('Error updating the database:', err);
+    } finally {
+        await client.end();
+        console.log('Database connection closed');
     }
 };
+
+run();
