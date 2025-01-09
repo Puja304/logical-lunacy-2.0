@@ -13,7 +13,7 @@ export default function Projects() {
     const [currentProjNum, setCurrentProjectNum] = useState(0);
 
     // Define the backend URL dynamically based on the environment
-    const backendUrl = process.env.REACT_APP_BACKEND_URL || 'http://localhost:5000';
+    let backendUrl = 'https://your-backend-app.herokuapp.com';
 
     useEffect(() => {
         const animateTitle = () => {
@@ -25,20 +25,36 @@ export default function Projects() {
         setTimeout(() => animateTitle(), 500);
 
         console.log('Fetching projects...');
-        fetch(`${backendUrl}/api/projects`)  // Use the dynamic backend URL here
-            .then(response => {
-                console.log('Response received:', response);
-                if (!response.ok) {
-                    throw new Error('Network response was not ok');
-                }
-                return response.json();
-            })
-            .then(data => {
-                console.log('Fetched projects:', data);
-                setProjectSet(data);
-            })
-            .catch(error => {
-                console.error('Error fetching projects:', error);
+
+        // Function to fetch from a given URL
+        const fetchProjects = (url) => {
+            return fetch(`${url}/api/projects`)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    console.log('Fetched projects:', data);
+                    setProjectSet(data);
+                })
+                .catch(error => {
+                    console.error('Error fetching projects:', error);
+                    throw error;  // Re-throw the error to allow fallback logic
+                });
+        };
+
+        // Try to fetch from Heroku first
+        fetchProjects(backendUrl)
+            .catch(() => {
+                // If fetching from Heroku fails, fall back to localhost
+                console.log('Heroku fetch failed, trying localhost...');
+                backendUrl = 'http://localhost:5000';
+                fetchProjects( backendUrl)
+                    .catch(error => {
+                        console.error('Error fetching projects from localhost:', error);
+                    });
             });
     }, []);
 
