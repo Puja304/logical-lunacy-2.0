@@ -47,6 +47,7 @@ export default function Projects() {
 
         // Try to fetch from Heroku first
         fetchProjects(backendUrl)
+            console.log("https://your-backend-app.herokuapp.com has responded")
             .catch(() => {
                 // If fetching from Heroku fails, fall back to localhost
                 console.log('Heroku fetch failed, trying localhost...');
