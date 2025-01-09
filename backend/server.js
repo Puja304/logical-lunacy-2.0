@@ -22,11 +22,6 @@ app.get('/api/projects', async (req, res) => {
     }
 });
 
-// Serve the React app for all other routes
-app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, "public", "index.html"));
-});
-
 // Route to add a new project
 app.post('/projects', (req, res) => {
     const { name, languages, frameworks, status, picture_link, description } = req.body;
