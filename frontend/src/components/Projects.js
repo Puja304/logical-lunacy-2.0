@@ -29,6 +29,8 @@ export default function Projects() {
         // Function to fetch from a given URL
         const fetchProjects = (url) => {
             return fetch(`${url}/api/projects`)
+                console.log(`Attempting to fetch from ${url}`);
+                return fetch(`${url}/api/projects`
                 .then(response => {
                     if (!response.ok) {
                         throw new Error('Network response was not ok');
@@ -47,7 +49,7 @@ export default function Projects() {
 
         // Try to fetch from Heroku first
         fetchProjects(backendUrl)
-            console.log("https://your-backend-app.herokuapp.com has responded")
+            console.log('Successfully fetched from Heroku'
             .catch(() => {
                 // If fetching from Heroku fails, fall back to localhost
                 console.log('Heroku fetch failed, trying localhost...');
