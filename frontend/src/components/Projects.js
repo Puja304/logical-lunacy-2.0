@@ -37,7 +37,9 @@ export default function Projects() {
                 })
                 .then(data => {
                     console.log('Fetched projects:', data);
-                    setProjectSet(data);
+                    // Exclude the first JSON entry
+                    const filteredData = data.slice(1);
+                    setProjectSet(filteredData);
                 })
                 .catch(error => {
                     console.error('Error fetching projects:', error);
@@ -55,7 +57,6 @@ export default function Projects() {
             });
     }, []);
 
-
     const nextProject = () => {
         setCurrentProjectNum((currentProjNum + 1) % projectSet.length);
     };
@@ -66,6 +67,8 @@ export default function Projects() {
 
     let currentProject = projectSet[currentProjNum];
 
+    console.log(projectSet)
+
     if (!currentProject) {
         return <div>No projects found</div>; // Handle loading state
     }
@@ -74,7 +77,6 @@ export default function Projects() {
         sessionStorage.setItem('lightMode', 'true');
         navigate('/');
     };
-
     return (
         <div className="projects-page">
             <div className="arrows-up">
@@ -104,17 +106,13 @@ export default function Projects() {
             </div>
             <div className="project-container">
                 <div className="details">
-                    <h1>{currentProject.name}</h1>
-                    <status>
-                        <GoDotFill color={currentProject.status ? 'green' : 'red'} />
-                        {currentProject.status ? "Completed" : "In Progress"}
-                    </status>
-                    <h3>Languages: {currentProject.languages}</h3>
-                    <h3>Frameworks: {currentProject.frameworks}</h3>
+                    <h1>{currentProject.title}</h1>
                 </div>
-                {console.log(`Image path: ${backendUrl}${currentProject.picture_link}`)}
+                {console.log(`Image path: ${backendUrl}/images/${currentProject.picture_link}`)}
+                {console.log(`Image name: ${currentProject.image.split('.').slice(0, -1).join('.') }`)}
+
                 <img 
-                    src={`${backendUrl}${currentProject.picture_link}`}
+                    src={require(`../images/${currentProject.image}`)} 
                     alt={currentProject.name} 
                 />
                 <p>{currentProject.description}</p>
